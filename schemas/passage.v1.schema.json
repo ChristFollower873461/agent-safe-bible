@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ChristFollower873461/agent-safe-bible/raw/main/schemas/passage.v1.schema.json",
+  "title": "agent-safe-bible.passage.v1",
+  "description": "A verbatim public-domain Bible quotation. Commentary is not allowed in text.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "ref",
+    "usfm",
+    "translation",
+    "text",
+    "license",
+    "kind"
+  ],
+  "properties": {
+    "schema": {
+      "const": "agent-safe-bible.passage.v1"
+    },
+    "ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human reference, e.g. John 3:16."
+    },
+    "usfm": {
+      "type": "string",
+      "pattern": "^[A-Z1-3]{3} [0-9]+:[0-9]+$",
+      "description": "USFM-style book chapter:verse, e.g. JHN 3:16."
+    },
+    "book": {
+      "type": "string"
+    },
+    "chapter": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "verse": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "translation": {
+      "type": "string",
+      "description": "Must match an allowed id in data/allowlist.json."
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Verbatim verse text only. No commentary, no paraphrase."
+    },
+    "license": {
+      "const": "public-domain"
+    },
+    "kind": {
+      "const": "quotation"
+    },
+    "source": {
+      "type": "string"
+    }
+  }
+}

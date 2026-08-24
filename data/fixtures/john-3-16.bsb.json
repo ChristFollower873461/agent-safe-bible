@@ -1,0 +1,13 @@
+{
+  "schema": "agent-safe-bible.passage.v1",
+  "ref": "John 3:16",
+  "usfm": "JHN 3:16",
+  "book": "John",
+  "chapter": 3,
+  "verse": 16,
+  "translation": "BSB",
+  "text": "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life.",
+  "license": "public-domain",
+  "kind": "quotation",
+  "source": "https://berean.bible"
+}

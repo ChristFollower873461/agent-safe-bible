@@ -1,0 +1,61 @@
+{
+  "schema": "agent-safe-bible.allowlist.v1",
+  "default_translation": "BSB",
+  "canon": "protestant-66",
+  "translations": [
+    {
+      "id": "BSB",
+      "name": "Berean Standard Bible",
+      "language": "en",
+      "license": "public-domain",
+      "license_date": "2023-04-30",
+      "source_url": "https://berean.bible/terms.htm",
+      "status": "allowed",
+      "role": "default-modern-english"
+    },
+    {
+      "id": "WEB",
+      "name": "World English Bible",
+      "language": "en",
+      "license": "public-domain",
+      "source_url": "https://worldenglish.bible",
+      "status": "allowed",
+      "role": "secondary-modern-english"
+    },
+    {
+      "id": "KJV",
+      "name": "King James Version",
+      "language": "en",
+      "license": "public-domain",
+      "edition": "1769",
+      "status": "allowed",
+      "role": "classic-english"
+    }
+  ],
+  "refused": [
+    {
+      "id": "NIV",
+      "reason": "Copyrighted; quotation limits; not safe for unrestricted agent reuse."
+    },
+    {
+      "id": "ESV",
+      "reason": "Copyrighted; quotation limits; not safe for unrestricted agent reuse."
+    },
+    {
+      "id": "NASB",
+      "reason": "Copyrighted; quotation limits; not safe for unrestricted agent reuse."
+    },
+    {
+      "id": "NLT",
+      "reason": "Copyrighted; quotation limits; not safe for unrestricted agent reuse."
+    },
+    {
+      "id": "CSB",
+      "reason": "Copyrighted; quotation limits; not safe for unrestricted agent reuse."
+    },
+    {
+      "id": "NKJV",
+      "reason": "Copyrighted; quotation limits; not safe for unrestricted agent reuse."
+    }
+  ]
+}
