@@ -1,0 +1,18 @@
+# Agent-Safe Bible
+
+Public-domain Scripture corpus and agent contract.
+https://github.com/ChristFollower873461/agent-safe-bible
+
+Read AGENTS.md first. Default translation: BSB. Allowed: BSB, WEB, KJV. Refused: NIV, ESV, NASB, NLT, CSB, NKJV, and any other limited-license edition.
+
+Quote only from this corpus. Never quote from memory. Never paraphrase as Scripture. Fail closed on unknown references.
+
+v0 status: planning. Fixtures exist for John 3:16. Full 66-book ingest is not done.
+
+Key files:
+- AGENTS.md
+- PLAN.md
+- data/allowlist.json
+- schemas/passage.v1.schema.json
+- skills/scripture-quote/SKILL.md
+- data/fixtures/
