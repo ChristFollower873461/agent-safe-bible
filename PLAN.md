@@ -23,6 +23,19 @@ LLMs are a bad Bible. They invent references, paraphrase verses, mix commentary 
 5. Ship a local lookup that returns the passage object or an explicit miss.
 6. Test golden verses for exact text match, including John 3:16 in all three allowed translations.
 
+## Tracking issues
+
+| Phase | Issue | Title |
+| --- | --- | --- |
+| 0 | [#5](https://github.com/ChristFollower873461/agent-safe-bible/issues/5) | Freeze the v0 translation allowlist and refuse-list |
+| 0 | [#4](https://github.com/ChristFollower873461/agent-safe-bible/issues/4) | Ratify passage.v1 so commentary cannot live in text |
+| 1 | [#6](https://github.com/ChristFollower873461/agent-safe-bible/issues/6) | Ingest BSB 66-book corpus with SHA-256 manifest |
+| 1 | [#3](https://github.com/ChristFollower873461/agent-safe-bible/issues/3) | Add WEB and KJV as secondary hashed corpora |
+| 2 | [#1](https://github.com/ChristFollower873461/agent-safe-bible/issues/1) | Ship fail-closed local lookup |
+| 3 | [#2](https://github.com/ChristFollower873461/agent-safe-bible/issues/2) | Keep AGENTS.md, skill, and llms.txt in lockstep |
+| 4 | [#8](https://github.com/ChristFollower873461/agent-safe-bible/issues/8) | Expand golden-verse exact-match tests |
+| later | [#7](https://github.com/ChristFollower873461/agent-safe-bible/issues/7) | MCP server that wraps local lookup only |
+
 ## Phases
 
 ### Phase 0 — this commit
