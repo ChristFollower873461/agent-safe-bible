@@ -1,6 +1,6 @@
 # Plan
 
-Status: planning, public, v0 not shipped.
+Status: v0 shipped in-repo. Lookup, hashed BSB/WEB/KJV corpora, agent contract, and local MCP are present.
 
 ## Problem
 

@@ -5,14 +5,20 @@ https://github.com/ChristFollower873461/agent-safe-bible
 
 Read AGENTS.md first. Default translation: BSB. Allowed: BSB, WEB, KJV. Refused: NIV, ESV, NASB, NLT, CSB, NKJV, and any other limited-license edition.
 
-Quote only from this corpus. Never quote from memory. Never paraphrase as Scripture. Fail closed on unknown references.
+Quote only via local lookup:
 
-v0 status: planning. Fixtures exist for John 3:16. Full 66-book ingest is not done.
+    python3 -m asb get "John 3:16" --tr BSB
+
+Never quote from memory. Never paraphrase as Scripture. Fail closed on unknown references and refused translations. Do not call remote Bible APIs.
+
+MCP: python3 -m asb mcp
+Tools: get_passage, list_translations
+
+v0 status: 66-book hashed corpora for BSB, WEB, and KJV are present. Runtime is offline.
 
 Key files:
 - AGENTS.md
-- PLAN.md
-- data/allowlist.json
-- schemas/passage.v1.schema.json
 - skills/scripture-quote/SKILL.md
-- data/fixtures/
+- data/allowlist.json
+- data/corpus/
+- schemas/passage.v1.schema.json

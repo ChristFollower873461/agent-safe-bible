@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ChristFollower873461/agent-safe-bible/raw/main/schemas/book.v1.schema.json",
+  "title": "agent-safe-bible.book.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "translation", "id", "name", "chapters"],
+  "properties": {
+    "schema": { "const": "agent-safe-bible.book.v1" },
+    "translation": { "type": "string", "minLength": 1 },
+    "id": { "type": "string", "pattern": "^[A-Z1-3]{3}$" },
+    "name": { "type": "string", "minLength": 1 },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["chapter", "verses"],
+        "properties": {
+          "chapter": { "type": "integer", "minimum": 1 },
+          "verses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["verse", "text"],
+              "properties": {
+                "verse": { "type": "integer", "minimum": 1 },
+                "text": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

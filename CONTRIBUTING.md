@@ -38,6 +38,9 @@ A corpus pull request must include:
 
 ```sh
 python3 tests/test_contract.py
+python3 -m asb verify
 ```
+
+Re-ingest only with `python3 -m asb ingest`. Do not hand-edit `data/corpus/` wording. Runtime lookup must stay offline.
 
 Add tests with the change. Do not merge a wording change that only updates a fixture to make a test pass unless the source edition actually changed and that change is documented.

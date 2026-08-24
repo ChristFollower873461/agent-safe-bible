@@ -11,16 +11,26 @@
       "license_date": "2023-04-30",
       "source_url": "https://berean.bible/terms.htm",
       "status": "allowed",
-      "role": "default-modern-english"
+      "role": "default-modern-english",
+      "ingest": {
+        "provider": "helloao",
+        "helloao_id": "BSB",
+        "complete_url": "https://bible.helloao.org/api/BSB/complete.simple.json"
+      }
     },
     {
       "id": "WEB",
       "name": "World English Bible",
       "language": "en",
       "license": "public-domain",
-      "source_url": "https://worldenglish.bible",
+      "source_url": "https://ebible.org/Scriptures/details.php?id=engwebp",
       "status": "allowed",
-      "role": "secondary-modern-english"
+      "role": "secondary-modern-english",
+      "ingest": {
+        "provider": "helloao",
+        "helloao_id": "ENGWEBP",
+        "complete_url": "https://bible.helloao.org/api/ENGWEBP/complete.simple.json"
+      }
     },
     {
       "id": "KJV",
@@ -28,8 +38,14 @@
       "language": "en",
       "license": "public-domain",
       "edition": "1769",
+      "source_url": "https://ebible.org/Scriptures/details.php?id=eng-kjv2006",
       "status": "allowed",
-      "role": "classic-english"
+      "role": "classic-english",
+      "ingest": {
+        "provider": "helloao",
+        "helloao_id": "eng_kjv",
+        "complete_url": "https://bible.helloao.org/api/eng_kjv/complete.simple.json"
+      }
     }
   ],
   "refused": [

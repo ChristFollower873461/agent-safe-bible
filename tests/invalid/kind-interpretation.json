@@ -1,0 +1,9 @@
+{
+  "schema": "agent-safe-bible.passage.v1",
+  "ref": "John 3:16",
+  "usfm": "JHN 3:16",
+  "translation": "BSB",
+  "text": "This is a paraphrase, not Scripture.",
+  "license": "public-domain",
+  "kind": "interpretation"
+}

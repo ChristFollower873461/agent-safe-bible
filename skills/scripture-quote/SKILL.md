@@ -6,22 +6,31 @@ Use this skill whenever a human asks for a Bible verse, passage, or "what does t
 
 1. Read `data/allowlist.json`. Default translation is `BSB`.
 2. If the asked translation is in `refused`, refuse. Suggest BSB, WEB, or KJV.
-3. Look up the reference in this repository. Until the full corpus exists, only quote files you have actually opened under `data/fixtures/`.
-4. Emit the passage as `agent-safe-bible.passage.v1` JSON, or a block quote that copies `text` exactly and names `translation` plus `ref`.
+3. From this repository, run:
+
+   ```sh
+   python3 -m asb get "John 3:16" --tr BSB
+   ```
+
+4. Emit the stdout JSON as the quotation, or a block quote that copies `text` exactly and names `translation` plus `ref`.
 5. Put any explanation after the quote. Never inside it.
+6. If stdout is empty and the process exits non-zero, report the stderr JSON. Do not invent a verse.
 
 ## Do not do this
 
-- Quote from memory.
+- Quote from memory, including John 3:16, Genesis 1:1, Psalm 23, or Romans 8:28.
 - Paraphrase and label it Scripture.
 - Invent a reference.
 - Use NIV, ESV, NASB, NLT, CSB, or NKJV.
-- Claim the 66-book corpus is present before ingest lands.
+- Call a remote Bible API. Lookup is local and hashed.
 
-## Current fixtures
+## Commands
 
-- `data/fixtures/john-3-16.bsb.json`
-- `data/fixtures/john-3-16.web.json`
-- `data/fixtures/john-3-16.kjv.json`
+```sh
+python3 -m asb get "Genesis 1:1"
+python3 -m asb get "Psalm 23:1-6" --tr KJV
+python3 -m asb get "John 3:16" --tr WEB
+python3 -m asb mcp
+```
 
-If the human asks for any other verse, say it is not in the corpus yet.
+A range returns `agent-safe-bible.passages.v1` with one `passage.v1` object per verse.

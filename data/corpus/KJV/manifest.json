@@ -1,0 +1,415 @@
+{
+  "schema": "agent-safe-bible.manifest.v1",
+  "translation": "KJV",
+  "canon": "protestant-66",
+  "books": 66,
+  "verses": 31102,
+  "normalization": [
+    "strip-leading-pilcrow"
+  ],
+  "source": {
+    "name": "HelloAO Free Use Bible API",
+    "helloao_id": "eng_kjv",
+    "url": "https://bible.helloao.org/api/eng_kjv/complete.simple.json",
+    "license_url": "https://ebible.org/Scriptures/details.php?id=eng-kjv2006",
+    "cache_file": ".cache/helloao/eng_kjv.complete.simple.json"
+  },
+  "files": [
+    {
+      "path": "GEN.json",
+      "sha256": "0edb8b469f22ad4561bb9cf4cbe423ef2b1f48bc11fa4801c74490d4cf665d81",
+      "verses": 1533,
+      "chapters": 50
+    },
+    {
+      "path": "EXO.json",
+      "sha256": "b4e693728bfabbfa9511aa5115375a9906424846b5ef6094fb9333f7e50a189c",
+      "verses": 1213,
+      "chapters": 40
+    },
+    {
+      "path": "LEV.json",
+      "sha256": "aa2b8b95825a64b1922d79987923bd0dfb5fd9cc3a0ded0f32ac4500c8d878b4",
+      "verses": 859,
+      "chapters": 27
+    },
+    {
+      "path": "NUM.json",
+      "sha256": "155593f1c76babdc4c882ae03ba844c717a562aa6efce31120ba93e1bb4b7e6a",
+      "verses": 1288,
+      "chapters": 36
+    },
+    {
+      "path": "DEU.json",
+      "sha256": "09afefde0d43a28e5ab5832d55be62da0ec2f1ec8b5fa98fad047217e1e4d106",
+      "verses": 959,
+      "chapters": 34
+    },
+    {
+      "path": "JOS.json",
+      "sha256": "3371105ff6f5f1e36b6686f8eacb62e317856e07b328061b243a585615100ed7",
+      "verses": 658,
+      "chapters": 24
+    },
+    {
+      "path": "JDG.json",
+      "sha256": "3081eb4dc8d4cf293b34a910aaa8b0aa104130f64d55a6070c56045e0667304b",
+      "verses": 618,
+      "chapters": 21
+    },
+    {
+      "path": "RUT.json",
+      "sha256": "e28807df31f6db798e51f208d13a2a3de0b5f2c06dd6572611d0f7da36caca8c",
+      "verses": 85,
+      "chapters": 4
+    },
+    {
+      "path": "1SA.json",
+      "sha256": "4d97947269c4b6f62218c271cb68bb309d872a3f35a9fac93a5816e2b97ef822",
+      "verses": 810,
+      "chapters": 31
+    },
+    {
+      "path": "2SA.json",
+      "sha256": "6a5c88e6f3f953b1041a79826f4dc5a7d3e93e433704406e91159c0052c0770f",
+      "verses": 695,
+      "chapters": 24
+    },
+    {
+      "path": "1KI.json",
+      "sha256": "eba6511a6b8d043ae7214ce3323df4ffaf2600759fe8a4b2a1944503bae23325",
+      "verses": 816,
+      "chapters": 22
+    },
+    {
+      "path": "2KI.json",
+      "sha256": "ebf5858b6f0c9e1df5d46ab983cbba53a332ed664196c2f4552352faad2c90c5",
+      "verses": 719,
+      "chapters": 25
+    },
+    {
+      "path": "1CH.json",
+      "sha256": "0a1cb804cda5a4a1d8d22647ab48c19beebefa6d3bbfcd30622885dd2f169d0a",
+      "verses": 942,
+      "chapters": 29
+    },
+    {
+      "path": "2CH.json",
+      "sha256": "5676c92a378af43f471ed882d017aaa0858292a3671f3d9787ce59c56a8f7a26",
+      "verses": 822,
+      "chapters": 36
+    },
+    {
+      "path": "EZR.json",
+      "sha256": "81d7fa7b6e0fd7400e2a70bc100f54b4c62cc6e4d7a93a02dbca7a594efc9243",
+      "verses": 280,
+      "chapters": 10
+    },
+    {
+      "path": "NEH.json",
+      "sha256": "12a86b5d76f0f4f350136f737bcf1dd13147129ae98efb55324f1555bcd9f641",
+      "verses": 406,
+      "chapters": 13
+    },
+    {
+      "path": "EST.json",
+      "sha256": "09e84b1f089ba98c2415e8f8febd1652948f71777d7ad2c2ea9b36b3d929f17b",
+      "verses": 167,
+      "chapters": 10
+    },
+    {
+      "path": "JOB.json",
+      "sha256": "3b80c4994cb4d34dda8249d6a8ba1f8862c317df49099920240ae30b81b21681",
+      "verses": 1070,
+      "chapters": 42
+    },
+    {
+      "path": "PSA.json",
+      "sha256": "b19879ca4410ea8dcb2854c6395cbabeaa9f06b41d297418689aca3d6361607d",
+      "verses": 2461,
+      "chapters": 150
+    },
+    {
+      "path": "PRO.json",
+      "sha256": "23f6bfe6fa53377bdb0e12bf0be7aef3dcbe57454b0eb5a82917818ac2e6695c",
+      "verses": 915,
+      "chapters": 31
+    },
+    {
+      "path": "ECC.json",
+      "sha256": "c991a1812ca3a54e86b27c89ef4e0deca1ea537dfc5d5113692ddf92c0b0aa09",
+      "verses": 222,
+      "chapters": 12
+    },
+    {
+      "path": "SNG.json",
+      "sha256": "1cd8df6d1e9e955e8f83845c1a9d6fea2bff18c7579d478427987465e1411263",
+      "verses": 117,
+      "chapters": 8
+    },
+    {
+      "path": "ISA.json",
+      "sha256": "34a7a479f9b40fead3f0dba6e6208672fdcc4543198556119dc80666084bb354",
+      "verses": 1292,
+      "chapters": 66
+    },
+    {
+      "path": "JER.json",
+      "sha256": "1c7b2adecd77e437f3512d8984d77dbc121fb8c1a7686ab6eccbafd267b3b3f6",
+      "verses": 1364,
+      "chapters": 52
+    },
+    {
+      "path": "LAM.json",
+      "sha256": "e008dd8efa5e9907ae026da1986e78cb9fcf68feca9b7dcf200e56de7ddf8e4d",
+      "verses": 154,
+      "chapters": 5
+    },
+    {
+      "path": "EZK.json",
+      "sha256": "f229321fcc31f0c0bad6fcc0aabf30780b200068bb10baa8011eb6f8909df297",
+      "verses": 1273,
+      "chapters": 48
+    },
+    {
+      "path": "DAN.json",
+      "sha256": "96e755939ac3a0341f41e0494f49509a3ada5a9c8b54dce01228c199852b028f",
+      "verses": 357,
+      "chapters": 12
+    },
+    {
+      "path": "HOS.json",
+      "sha256": "2b67917de0dab6b7a8f5acda8c3e0c8a17348b11684c1ed5397a41471871fdaa",
+      "verses": 197,
+      "chapters": 14
+    },
+    {
+      "path": "JOL.json",
+      "sha256": "6d571481b8703b101029fe437a04d75410da138151e8a838d8ecb98966feab78",
+      "verses": 73,
+      "chapters": 3
+    },
+    {
+      "path": "AMO.json",
+      "sha256": "28558c4caf501f94234d40c582187c525bf9364466fd4a73abfb49465c980082",
+      "verses": 146,
+      "chapters": 9
+    },
+    {
+      "path": "OBA.json",
+      "sha256": "41585998234e251b07d208869bf73a2d4aa421e35c7f06ada5ae8191043e4ef3",
+      "verses": 21,
+      "chapters": 1
+    },
+    {
+      "path": "JON.json",
+      "sha256": "0f8fd4136be2414400ae2f20e728e48d06f126dc5ed99461e2a3d513dea0d444",
+      "verses": 48,
+      "chapters": 4
+    },
+    {
+      "path": "MIC.json",
+      "sha256": "54ee99721576582595596b0305683d9a3f70cdfb7bfbc012897f647dde87c6ba",
+      "verses": 105,
+      "chapters": 7
+    },
+    {
+      "path": "NAM.json",
+      "sha256": "420bd2374fc364a5dcf7e37f3ec8cbd14afb3d4624dbad9e18a81b19d7d8c4e0",
+      "verses": 47,
+      "chapters": 3
+    },
+    {
+      "path": "HAB.json",
+      "sha256": "10f6d7ed5782781e885efdceecdd9037822021f1bb15bb11a4e71e2d3aeebd6e",
+      "verses": 56,
+      "chapters": 3
+    },
+    {
+      "path": "ZEP.json",
+      "sha256": "85e2e63ec5e733858a509966006dbfbe1b097acf297407dd2d48e6890364abea",
+      "verses": 53,
+      "chapters": 3
+    },
+    {
+      "path": "HAG.json",
+      "sha256": "653d727256bcbf646e3a7499ee20e50385a930043e0e638d2e67bb1d509d10e8",
+      "verses": 38,
+      "chapters": 2
+    },
+    {
+      "path": "ZEC.json",
+      "sha256": "48f71e6973936705ab8981d49d564bb8a05c9517047d523c5537d115b0c4fb1f",
+      "verses": 211,
+      "chapters": 14
+    },
+    {
+      "path": "MAL.json",
+      "sha256": "4c4883f7434250ed3a52ba1f3e5e790b627077858834850ec51cdb03d76cab94",
+      "verses": 55,
+      "chapters": 4
+    },
+    {
+      "path": "MAT.json",
+      "sha256": "62a189fc871160c382f7c3f4b69a8a1a934290b9df5e3b6bcf8b09106113958d",
+      "verses": 1071,
+      "chapters": 28
+    },
+    {
+      "path": "MRK.json",
+      "sha256": "0002b948c402a1f933ca93be1e488bb4268e8648eac2040619431bb40a31b3f0",
+      "verses": 678,
+      "chapters": 16
+    },
+    {
+      "path": "LUK.json",
+      "sha256": "994ed8a2a71f0bffdfd0fe4332061fed9e2a2cc107cecc27c5097495791aa2df",
+      "verses": 1151,
+      "chapters": 24
+    },
+    {
+      "path": "JHN.json",
+      "sha256": "e188430d4ccad31c1bfc5a384370cdf1b3bae503c18ef0bd096d3e8da8e4a182",
+      "verses": 879,
+      "chapters": 21
+    },
+    {
+      "path": "ACT.json",
+      "sha256": "4f77a614baab15e99d585dc60b7ff82a9a4893bed47498f3850633319ea45a86",
+      "verses": 1007,
+      "chapters": 28
+    },
+    {
+      "path": "ROM.json",
+      "sha256": "aa28e3994f4b54fe295479f87342db2faf5d9d9cc379100f9bb363cfe33ef13c",
+      "verses": 433,
+      "chapters": 16
+    },
+    {
+      "path": "1CO.json",
+      "sha256": "a52a306e7ec2f020cfc1c766aeba3116b357ea61f485f8e4e4c760bdcefc5d2a",
+      "verses": 437,
+      "chapters": 16
+    },
+    {
+      "path": "2CO.json",
+      "sha256": "7eba791b7dbabfa53c42b2c3693e039147397ead6108790f52033684e4b17fcd",
+      "verses": 257,
+      "chapters": 13
+    },
+    {
+      "path": "GAL.json",
+      "sha256": "fc37ef310ace5c9d3cccb4876aea5f12e7ea09bcd75f93adf0a20978262bdc62",
+      "verses": 149,
+      "chapters": 6
+    },
+    {
+      "path": "EPH.json",
+      "sha256": "a48666d6afd65d36457143fa4da35a3bd65820ecf5b48b5dba6f9f38c6b24034",
+      "verses": 155,
+      "chapters": 6
+    },
+    {
+      "path": "PHP.json",
+      "sha256": "e531b050ae1176e3ef82038e3ea644cdc12088b617a5f917fd564258e2a1a6dd",
+      "verses": 104,
+      "chapters": 4
+    },
+    {
+      "path": "COL.json",
+      "sha256": "be64a4e7e2f1740beb2bb805325cbee7f22fa9b0bea6247bed41a000db7bb352",
+      "verses": 95,
+      "chapters": 4
+    },
+    {
+      "path": "1TH.json",
+      "sha256": "3a791fc1b4a1c2683b4e9fe1783540c91996b46942dd1c62861be311ece1d7a2",
+      "verses": 89,
+      "chapters": 5
+    },
+    {
+      "path": "2TH.json",
+      "sha256": "648479103b8e4ac40d417e6a4ea4b199c3f7a50e18abfef5537a06ccc1ce5092",
+      "verses": 47,
+      "chapters": 3
+    },
+    {
+      "path": "1TI.json",
+      "sha256": "961ce2813b22fdf5bc83d32d1b026bee0e736f5bd5b5319afd0d25723d736a13",
+      "verses": 113,
+      "chapters": 6
+    },
+    {
+      "path": "2TI.json",
+      "sha256": "5548022699fbfc62d21b9f05e2adbf7a4f3f7b63c911a1aacf917fce4e3711f4",
+      "verses": 83,
+      "chapters": 4
+    },
+    {
+      "path": "TIT.json",
+      "sha256": "4cd2ec2d3e182660eac18ec5a9402ccea075ae7883866a68275a6361051cb857",
+      "verses": 46,
+      "chapters": 3
+    },
+    {
+      "path": "PHM.json",
+      "sha256": "761b287afba7d81341e9934cc119450daf941ff98d3285b30f9ab89e41a13be7",
+      "verses": 25,
+      "chapters": 1
+    },
+    {
+      "path": "HEB.json",
+      "sha256": "cb5024fbc381f2381e2e5be6a4f040b79498426a3230f9e6f50fdc2deb4a5f48",
+      "verses": 303,
+      "chapters": 13
+    },
+    {
+      "path": "JAS.json",
+      "sha256": "5b0878e7b82f6afe9c659cb403d19af7aeb5bf597eb9d2b5c19ed295464b6ba9",
+      "verses": 108,
+      "chapters": 5
+    },
+    {
+      "path": "1PE.json",
+      "sha256": "8a920e0a458bfe7eff280756a6420c4e1853467f8fd8b86e15e20affbc5a4ea0",
+      "verses": 105,
+      "chapters": 5
+    },
+    {
+      "path": "2PE.json",
+      "sha256": "a6075b0a6d1a405a147bd3216608d3e959b962ddf0b5bf09f7eb13087bedba75",
+      "verses": 61,
+      "chapters": 3
+    },
+    {
+      "path": "1JN.json",
+      "sha256": "3f9b687179658061d8c6057505a82a901ab2e25d73ba7472f015516ef0e629d4",
+      "verses": 105,
+      "chapters": 5
+    },
+    {
+      "path": "2JN.json",
+      "sha256": "5b7b78e32541dbe77e9d5f1516d357821226e9d7e98606f8943fbfc55d55e095",
+      "verses": 13,
+      "chapters": 1
+    },
+    {
+      "path": "3JN.json",
+      "sha256": "3bc8f8818a3e79d226e855a7994e6c403f5e769c3a348cc985902d4c781273c0",
+      "verses": 14,
+      "chapters": 1
+    },
+    {
+      "path": "JUD.json",
+      "sha256": "d230e820f0273b69eb5843c71dd1e602eab204524d8cda4c9c0b8f91351b2e79",
+      "verses": 25,
+      "chapters": 1
+    },
+    {
+      "path": "REV.json",
+      "sha256": "3a1c29ad25172155a66902a0fff8660dc5c0aded681d975e7a92140acaefd188",
+      "verses": 404,
+      "chapters": 22
+    }
+  ]
+}

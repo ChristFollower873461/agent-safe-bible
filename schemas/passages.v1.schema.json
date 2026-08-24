@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ChristFollower873461/agent-safe-bible/raw/main/schemas/passages.v1.schema.json",
+  "title": "agent-safe-bible.passages.v1",
+  "description": "A contiguous range of verbatim quotations. Never mix commentary into passages.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "ref", "translation", "passages"],
+  "properties": {
+    "schema": { "const": "agent-safe-bible.passages.v1" },
+    "ref": { "type": "string", "minLength": 1 },
+    "translation": { "type": "string", "minLength": 1 },
+    "passages": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}
