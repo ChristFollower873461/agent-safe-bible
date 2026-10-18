@@ -10,6 +10,7 @@ from . import __version__
 from .allowlist import allowlist
 from .jsonutil import dumps
 from .lookup import LookupFailure, get
+from .schema import SchemaError, validate
 
 PROTOCOL = "2024-11-05"
 
@@ -71,6 +72,14 @@ def _result(request_id: Any, payload: Any, is_error: bool = False) -> dict[str, 
     }
 
 
+def _invalid_params(request_id: Any, message: str) -> dict[str, Any]:
+    return {
+        "jsonrpc": "2.0",
+        "id": request_id,
+        "error": {"code": -32602, "message": message},
+    }
+
+
 def _call_tool(name: str, arguments: dict[str, Any]) -> tuple[Any, bool]:
     if name == "list_translations":
         data = allowlist()
@@ -108,8 +117,18 @@ def handle(message: dict[str, Any]) -> dict[str, Any] | None:
     if method == "tools/list":
         return {"jsonrpc": "2.0", "id": request_id, "result": {"tools": TOOLS}}
     if method == "tools/call":
-        params = message.get("params") or {}
-        payload, is_error = _call_tool(params.get("name"), params.get("arguments") or {})
+        params = message.get("params")
+        if not isinstance(params, dict) or not isinstance(params.get("name"), str):
+            return _invalid_params(request_id, "tools/call requires an object with a string name")
+        tool = next((tool for tool in TOOLS if tool["name"] == params["name"]), None)
+        if tool is None:
+            return _invalid_params(request_id, f"Unknown tool: {params['name']}")
+        arguments = params.get("arguments", {})
+        try:
+            validate(arguments, tool["inputSchema"])
+        except SchemaError as exc:
+            return _invalid_params(request_id, str(exc))
+        payload, is_error = _call_tool(params["name"], arguments)
         return _result(request_id, payload, is_error)
     if method == "ping":
         return {"jsonrpc": "2.0", "id": request_id, "result": {}}
