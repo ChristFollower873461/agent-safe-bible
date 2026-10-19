@@ -37,6 +37,8 @@ python3 -m asb verify
 
 A successful `get` writes a `passage.v1` (or `passages.v1` range) object to stdout. Failures write JSON to stderr and leave stdout empty.
 
+`verify` requires each allowed translation's manifest to declare 66 books and list every canonical book exactly once, then checks the listed files against their SHA-256 hashes. An incomplete manifest, missing file, or hash mismatch exits 2 with an error on stderr; only a successful verification prints `ok corpus hashes`.
+
 ## Agent contract, short form
 
 Full rules: [`AGENTS.md`](AGENTS.md). Skill: [`skills/scripture-quote/SKILL.md`](skills/scripture-quote/SKILL.md). Machine summary: [`llms.txt`](llms.txt).
