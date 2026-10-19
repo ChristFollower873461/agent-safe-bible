@@ -35,21 +35,33 @@ def cmd_ingest(args: argparse.Namespace) -> int:
 
 def cmd_verify(_args: argparse.Namespace) -> int:
     from .allowlist import allowed_ids
+    from .books import CANON_IDS
     from .corpus import CORPUS_ROOT, load_manifest
     from .jsonutil import sha256_file
 
     errors = 0
+    expected_files = {f"{book_id}.json" for book_id in CANON_IDS}
     for translation in sorted(allowed_ids()):
         try:
             manifest = load_manifest(translation)
+            files = manifest["files"]
+            paths = [row["path"] for row in files]
+            if (
+                manifest.get("books") != len(CANON_IDS)
+                or len(paths) != len(expected_files)
+                or set(paths) != expected_files
+            ):
+                raise ValueError(
+                    f"manifest must declare {len(CANON_IDS)} books and list each canonical book exactly once"
+                )
         except Exception as exc:  # noqa: BLE001
             sys.stderr.write(f"{translation}: {exc}\n")
             errors += 1
             continue
-        for row in manifest["files"]:
+        for row in files:
             path = CORPUS_ROOT / translation / row["path"]
             digest = sha256_file(path) if path.is_file() else None
-            if digest != row["sha256"]:
+            if digest is None or digest != row["sha256"]:
                 sys.stderr.write(f"hash mismatch {translation}/{row['path']}\n")
                 errors += 1
     if errors:
